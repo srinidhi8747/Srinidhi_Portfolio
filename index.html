@@ -237,6 +237,7 @@ body, html {
 
 <!-- Contact Section -->
 
+<!-- Contact Section -->
 <div class="w3-container w3-light-grey" style="padding: 2px 16px" id="contact">
   <h3 class="w3-center"><b>CONTACT</b></h3>
   
@@ -267,7 +268,6 @@ body, html {
   </div>
 </div>
 
-
 <script>
   function submitForm(event) {
     event.preventDefault();
@@ -290,7 +290,7 @@ body, html {
         var modal = document.getElementById('myModal');
         var modalMessage = document.getElementById('modal-message');
         modalMessage.textContent = 'Thank you. Your message has been sent successfully!';
-        modal.style.display = 'block';
+        modal.style.display = 'flex';
         form.reset(); // Clear input fields upon successful submission
       } else {
         // Show error message in modal
@@ -308,7 +308,7 @@ body, html {
     var modal = document.getElementById('myModal');
     var modalMessage = document.getElementById('modal-message');
     modalMessage.textContent = message;
-    modal.style.display = 'block';
+    modal.style.display = 'flex';
   }
 
   function closeModal() {
@@ -322,6 +322,11 @@ body, html {
     if (event.target == modal) {
       modal.style.display = 'none';
     }
+  }
+
+  window.onload = function() {
+    // Ensure the modal is hidden on page load
+    closeModal();
   }
 </script>
 
@@ -337,19 +342,20 @@ body, html {
     height: 100%;
     overflow: auto;
     background-color: rgba(0,0,0,0.4);
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
   }
 
   .modal-content {
     background-color: #fefefe;
-    margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
+    max-width: 500px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-    animation-name: modalopen;
-    animation-duration: 1s;
-    position: relative; /* Ensure modal icons and button are positioned correctly */
-    text-align: center; /* Center align modal content */
+    animation: modalopen 1s;
+    text-align: center;
   }
 
   #modal-message {
@@ -366,8 +372,14 @@ body, html {
     from {opacity: 0}
     to {opacity: 1}
   }
-</style>
 
+  /* Add responsiveness for mobile devices */
+  @media screen and (max-width: 600px) {
+    .modal-content {
+      width: 90%;
+    }
+  }
+</style>
 
   
 <!-- Footer -->

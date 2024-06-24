@@ -242,9 +242,11 @@ body, html {
   <div style="margin-top:48px">
     <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Tumakuru, Karnataka</p>
     <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +91-8747930438</p>
+    <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"></i>Email: <a href="mailto:srinidhib18@gmail.com">srinidhib18@gmail.com</a></p>
     <br>
 
     <form action="https://formspree.io/f/mzbyedbe" method="post" onsubmit="submitForm(event)">
+      <input type="text" name="_honey" style="display:none">
       <p><input class="w3-input w3-border" type="text" placeholder="Name" required name="name"></p>
       <p><input class="w3-input w3-border" type="email" placeholder="Email" required name="email"></p>
       <p><input class="w3-input w3-border" type="text" placeholder="Message" required name="message"></p>
@@ -255,10 +257,22 @@ body, html {
     </form>
   </div>
 </div>
+
+<!-- Custom Modal Overlay -->
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <div id="modal-message"></div>
+    <button id="modal-okay" class="w3-button w3-green" onclick="closeModal()">OK</button>
+  </div>
+</div>
+
 <script>
   function submitForm(event) {
     event.preventDefault();
     var form = event.target;
+
+    // Disable form interaction during submission
+    form.classList.add('loading'); // Add a loading class to disable inputs and buttons
     
     // Send form data to Formspree
     var formData = new FormData(form);
@@ -270,18 +284,87 @@ body, html {
       }
     }).then(response => {
       if (response.ok) {
-        alert('Thank you. Message has been sent');
-        form.reset();
+        // Show success message in modal
+        var modal = document.getElementById('myModal');
+        var modalMessage = document.getElementById('modal-message');
+        modalMessage.textContent = 'Thank you. Your message has been sent successfully!';
+        modal.style.display = 'block';
       } else {
-        alert('Oops! There was a problem submitting your form.');
+        // Show error message in modal
+        showError('Oops! There was a problem submitting your form.');
       }
+      form.classList.remove('loading'); // Remove loading class on completion to re-enable inputs and buttons
     }).catch(error => {
-      alert('Oops! There was a problem submitting your form.');
+      // Show error message in modal
+      showError('Oops! There was a problem submitting your form.');
+      form.classList.remove('loading'); // Remove loading class on error to re-enable inputs and buttons
     });
   }
+
+  function showError(message) {
+    var modal = document.getElementById('myModal');
+    var modalMessage = document.getElementById('modal-message');
+    modalMessage.textContent = message;
+    modal.style.display = 'block';
+  }
+
+  function closeModal() {
+    var modal = document.getElementById('myModal');
+    modal.style.display = 'none';
+  }
+
+  // Close the modal if the user clicks outside of it
+  window.onclick = function(event) {
+    var modal = document.getElementById('myModal');
+    if (event.target == modal) {
+      modal.style.display = 'none';
+    }
+  }
 </script>
-    
-    <!-- Image of location/map -->
+
+<style>
+  /* CSS for modal */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+  }
+
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    animation-name: modalopen;
+    animation-duration: 1s;
+    position: relative; /* Ensure modal icons and button are positioned correctly */
+    text-align: center; /* Center align modal content */
+  }
+
+  #modal-message {
+    margin-bottom: 20px;
+    font-size: 18px;
+  }
+
+  #modal-okay {
+    display: block;
+    margin: 0 auto;
+  }
+
+  @keyframes modalopen {
+    from {opacity: 0}
+    to {opacity: 1}
+  }
+</style>
+
     
 
 <!-- Footer -->

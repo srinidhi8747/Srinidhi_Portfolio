@@ -266,6 +266,7 @@ body, html {
   </div>
 </div>
 
+
 <script>
   function submitForm(event) {
     event.preventDefault();
@@ -289,6 +290,7 @@ body, html {
         var modalMessage = document.getElementById('modal-message');
         modalMessage.textContent = 'Thank you. Your message has been sent successfully!';
         modal.style.display = 'block';
+        form.reset(); // Clear input fields upon successful submission
       } else {
         // Show error message in modal
         showError('Oops! There was a problem submitting your form.');
@@ -321,6 +323,7 @@ body, html {
     }
   }
 </script>
+
 
 <style>
   /* CSS for modal */

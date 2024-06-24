@@ -236,15 +236,26 @@ body, html {
 
 
 <!-- Contact Section -->
-<div class="w3-container w3-light-grey" style="padding: 2px;px 16px" id="contact" method="post" action="contact.php">
+<div class="w3-container w3-light-grey" style="padding: 2px 16px" id="contact">
   <h3 class="w3-center"><b>CONTACT</b></h3>
   
   <div style="margin-top:48px">
-    
-    <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"> </i> Tumakuru , Karnataka</p>
+    <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Tumakuru, Karnataka</p>
     <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +91-8747930438</p>
-    <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"></i>Email: <a href="mailto:srinidhib18@gmail.com">  srinidhib18@gmail.com</a></p>
+    <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"></i>Email: <a href="mailto:srinidhib18@gmail.com">srinidhib18@gmail.com</a></p>
     <br>
+<form action="https://formspree.io/f/mzbyedbe" method="post">
+  <input type="text" name="_honey" style="display:none">
+  <p><input class="w3-input w3-border" type="text" placeholder="Name" required name="name"></p>
+  <p><input class="w3-input w3-border" type="email" placeholder="Email" required name="email"></p>
+  <p><input class="w3-input w3-border" type="text" placeholder="Message" required name="message"></p>
+  <p>
+    <button class="w3-button w3-black" type="submit"><i class="fa fa-paper-plane"></i> SEND</button>
+    <button class="w3-button w3-black" type="reset"><i class="fa fa-times"></i> CANCEL</button>
+  </p>
+</form>
+  </div>
+</div>
     
     <!-- Image of location/map -->
     

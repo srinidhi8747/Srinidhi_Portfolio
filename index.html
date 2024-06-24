@@ -236,15 +236,18 @@ body, html {
 
 
 <!-- Contact Section -->
+<!-- Contact Section -->
 <div class="w3-container w3-light-grey" style="padding: 2px 16px" id="contact">
   <h3 class="w3-center"><b>CONTACT</b></h3>
   
   <div style="margin-top:48px">
     <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Tumakuru, Karnataka</p>
     <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +91-8747930438</p>
+    <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"></i>Email: <a href="mailto:srinidhib18@gmail.com">srinidhib18@gmail.com</a></p>
     <br>
 
-    <form action="https://formspree.io/f/mzbyedbe" method="post" onsubmit="submitForm(event)">
+    <form action="https://formspree.io/f/mzbyedb" method="post" onsubmit="submitForm(event)">
+      <input type="text" name="_honey" style="display:none">
       <p><input class="w3-input w3-border" type="text" placeholder="Name" required name="name"></p>
       <p><input class="w3-input w3-border" type="email" placeholder="Email" required name="email"></p>
       <p><input class="w3-input w3-border" type="text" placeholder="Message" required name="message"></p>
@@ -263,7 +266,6 @@ body, html {
     <button id="modal-okay" class="w3-button w3-green" onclick="closeModal()">OK</button>
   </div>
 </div>
-
 
 <script>
   function submitForm(event) {
@@ -287,7 +289,7 @@ body, html {
         var modal = document.getElementById('myModal');
         var modalMessage = document.getElementById('modal-message');
         modalMessage.textContent = 'Thank you. Your message has been sent successfully!';
-        modal.style.display = 'block';
+        modal.style.display = 'flex'; // Use flex display to center using flexbox
         form.reset(); // Clear input fields upon successful submission
       } else {
         // Show error message in modal
@@ -305,7 +307,7 @@ body, html {
     var modal = document.getElementById('myModal');
     var modalMessage = document.getElementById('modal-message');
     modalMessage.textContent = message;
-    modal.style.display = 'block';
+    modal.style.display = 'flex'; // Use flex display to center using flexbox
   }
 
   function closeModal() {
@@ -335,14 +337,17 @@ body, html {
     height: 100%;
     overflow: auto;
     background-color: rgba(0,0,0,0.4);
+    align-items: center; /* Use flexbox to center align items vertically */
+    justify-content: center; /* Use flexbox to center align items horizontally */
   }
 
   .modal-content {
     background-color: #fefefe;
-    margin: 15% auto;
+    margin: auto;
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
+    max-width: 500px; /* Add a max-width to prevent modal from getting too wide */
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
     animation-name: modalopen;
     animation-duration: 1s;
@@ -363,6 +368,14 @@ body, html {
   @keyframes modalopen {
     from {opacity: 0}
     to {opacity: 1}
+  }
+
+  /* Add responsiveness for mobile devices */
+  @media screen and (max-width: 600px) {
+    .modal-content {
+      width: 90%;
+      margin-top: 30%;
+    }
   }
 </style>
 

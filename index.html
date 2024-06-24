@@ -273,12 +273,9 @@ body, html {
     event.preventDefault();
     var form = event.target;
 
-    // Show the modal immediately
-    var modal = document.getElementById('myModal');
-    var modalMessage = document.getElementById('modal-message');
-    modalMessage.textContent = 'Thank you. Your message has been sent successfully!';
-    modal.style.display = 'flex';
-
+    // Disable form interaction during submission
+    form.classList.add('loading'); // Add a loading class to disable inputs and buttons
+    
     // Send form data to Formspree
     var formData = new FormData(form);
     fetch(form.action, {
@@ -289,12 +286,19 @@ body, html {
       }
     }).then(response => {
       if (response.ok) {
+        // Show success message in modal
+        var modal = document.getElementById('myModal');
+        var modalMessage = document.getElementById('modal-message');
+        modalMessage.textContent = 'Thank you. Your message has been sent successfully!';
+        modal.style.display = 'flex';
         form.reset(); // Clear input fields upon successful submission
       } else {
+        // Show error message in modal
         showError('Oops! There was a problem submitting your form.');
       }
       form.classList.remove('loading'); // Remove loading class on completion to re-enable inputs and buttons
     }).catch(error => {
+      // Show error message in modal
       showError('Oops! There was a problem submitting your form.');
       form.classList.remove('loading'); // Remove loading class on error to re-enable inputs and buttons
     });

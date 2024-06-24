@@ -239,13 +239,11 @@ body, html {
 <!-- Contact Section -->
 <div class="w3-container w3-light-grey" style="padding: 2px 16px" id="contact">
   <h3 class="w3-center"><b>CONTACT</b></h3>
-  
   <div style="margin-top:48px">
     <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Tumakuru, Karnataka</p>
     <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +91-8747930438</p>
     <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"></i>Email: <a href="mailto:srinidhib18@gmail.com">srinidhib18@gmail.com</a></p>
     <br>
-
     <form action="https://formspree.io/f/mzbyedb" method="post" onsubmit="submitForm(event)">
       <input type="text" name="_honey" style="display:none">
       <p><input class="w3-input w3-border" type="text" placeholder="Name" required name="name"></p>
@@ -270,63 +268,42 @@ body, html {
 <script>
   function submitForm(event) {
     event.preventDefault();
-    var form = event.target;
+    const form = event.target;
 
-    // Disable form interaction during submission
-    form.classList.add('loading'); // Add a loading class to disable inputs and buttons
-    
-    // Send form data to Formspree
-    var formData = new FormData(form);
+    form.classList.add('loading');
     fetch(form.action, {
       method: form.method,
-      body: formData,
-      headers: {
-        'Accept': 'application/json'
-      }
-    }).then(response => {
-      if (response.ok) {
-        // Show success message in modal
-        var modal = document.getElementById('myModal');
-        var modalMessage = document.getElementById('modal-message');
-        modalMessage.textContent = 'Thank you. Your message has been sent successfully!';
-        modal.style.display = 'flex'; // Use flex display to center using flexbox
-        form.reset(); // Clear input fields upon successful submission
-      } else {
-        // Show error message in modal
-        showError('Oops! There was a problem submitting your form.');
-      }
-      form.classList.remove('loading'); // Remove loading class on completion to re-enable inputs and buttons
-    }).catch(error => {
-      // Show error message in modal
-      showError('Oops! There was a problem submitting your form.');
-      form.classList.remove('loading'); // Remove loading class on error to re-enable inputs and buttons
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    })
+    .then(response => {
+      const modal = document.getElementById('myModal');
+      document.getElementById('modal-message').textContent = response.ok 
+        ? 'Thank you. Your message has been sent successfully!' 
+        : 'Oops! There was a problem submitting your form.';
+      modal.style.display = 'flex';
+      if (response.ok) form.reset();
+      form.classList.remove('loading');
+    })
+    .catch(() => {
+      document.getElementById('modal-message').textContent = 'Oops! There was a problem submitting your form.';
+      document.getElementById('myModal').style.display = 'flex';
+      form.classList.remove('loading');
     });
   }
 
-  function showError(message) {
-    var modal = document.getElementById('myModal');
-    var modalMessage = document.getElementById('modal-message');
-    modalMessage.textContent = message;
-    modal.style.display = 'flex'; // Use flex display to center using flexbox
-  }
-
   function closeModal() {
-    var modal = document.getElementById('myModal');
-    modal.style.display = 'none';
+    document.getElementById('myModal').style.display = 'none';
   }
 
-  // Close the modal if the user clicks outside of it
   window.onclick = function(event) {
-    var modal = document.getElementById('myModal');
-    if (event.target == modal) {
-      modal.style.display = 'none';
+    if (event.target == document.getElementById('myModal')) {
+      closeModal();
     }
   }
 </script>
 
-
 <style>
-  /* CSS for modal */
   .modal {
     display: none;
     position: fixed;
@@ -337,8 +314,8 @@ body, html {
     height: 100%;
     overflow: auto;
     background-color: rgba(0,0,0,0.4);
-    align-items: center; /* Use flexbox to center align items vertically */
-    justify-content: center; /* Use flexbox to center align items horizontally */
+    align-items: center;
+    justify-content: center;
   }
 
   .modal-content {
@@ -347,12 +324,10 @@ body, html {
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
-    max-width: 500px; /* Add a max-width to prevent modal from getting too wide */
+    max-width: 500px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-    animation-name: modalopen;
-    animation-duration: 1s;
-    position: relative; /* Ensure modal icons and button are positioned correctly */
-    text-align: center; /* Center align modal content */
+    animation: modalopen 1s;
+    text-align: center;
   }
 
   #modal-message {
@@ -370,7 +345,6 @@ body, html {
     to {opacity: 1}
   }
 
-  /* Add responsiveness for mobile devices */
   @media screen and (max-width: 600px) {
     .modal-content {
       width: 90%;
@@ -379,7 +353,6 @@ body, html {
   }
 </style>
 
-    
 
 <!-- Footer -->
 <footer class="w3-center w3-black w3-padding-64">

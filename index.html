@@ -306,7 +306,7 @@ body, html {
     modal.style.display = 'flex';
   }
 
-  function closeModal() {
+function closeModal() {
     var modal = document.getElementById('myModal');
     modal.style.display = 'none';
   }
@@ -319,9 +319,10 @@ body, html {
     }
   }
 
+  // Ensure the modal is hidden on page load
   window.onload = function() {
-    // Ensure the modal is hidden on page load
-    closeModal();
+    var modal = document.getElementById('myModal');
+    modal.style.display = 'none';
   }
 </script>
 

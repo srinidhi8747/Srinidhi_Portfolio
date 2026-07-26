@@ -177,9 +177,7 @@ function App() {
               <li>Implemented unit testing using <strong>MOQ</strong> and <strong>NUnit</strong> to ensure production-ready, maintainable code, collaborating with QA, product, and engineering teams.</li>
             </ul>
           </div>
-
-          {/* Earlier Role / Internship (Optional: Un-comment or edit as needed) */}
-          {/*
+          {
           <div className="timeline-item">
             <div className="timeline-header">
               <div>
@@ -193,7 +191,7 @@ function App() {
               <li>Assisted in database schema optimizations, stored procedure writing, and RESTful API integrations.</li>
             </ul>
           </div>
-          */}
+          }
         </div>
       </section>
 

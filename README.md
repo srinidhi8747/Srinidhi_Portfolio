@@ -30,7 +30,9 @@
   <br />
   <br />
 
-  [🌐 **Live Portfolio Website**](https://srinidhi8747.github.io/Srinidhi_Portfolio/){:target="_blank"} • [📄 **Download Resume**](Resume/Srinidhi.pdf){:target="_blank"} • [📫 **Get In Touch**](https://srinidhi8747.github.io/Srinidhi_Portfolio/#contact){:target="_blank"}
+  <a href="https://srinidhi8747.github.io/Srinidhi_Portfolio/" target="_blank" rel="noopener noreferrer">🌐 <strong>Live Portfolio Website</strong></a> • 
+  <a href="Resume/Srinidhi.pdf" target="_blank" rel="noopener noreferrer">📄 <strong>Download Resume</strong></a> • 
+  <a href="https://srinidhi8747.github.io/Srinidhi_Portfolio/#contact" target="_blank" rel="noopener noreferrer">📫 <strong>Get In Touch</strong></a>
 
 </div>
 

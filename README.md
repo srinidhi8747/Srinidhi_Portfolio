@@ -12,7 +12,7 @@
 
   <!-- GitHub Badges -->
   <p align="center">
-    <a href="https://github.com/srinidhi8747/Srinidhi_Portfolio">
+    <a href="https://github.com/srinidhi8747/Srinidhi_Portfolio" target="_blank" rel="noopener noreferrer">
       <img src="https://img.shields.io/github/license/srinidhi8747/Srinidhi_Portfolio?style=for-the-badge&color=6366f1" alt="License">
     </a>
     <img src="https://img.shields.io/badge/React-18.x-38bdf8?style=for-the-badge&logo=react&logoColor=white" alt="React 18">
@@ -23,14 +23,14 @@
   <br />
 
   <!-- Portfolio Image Banner -->
-  <a href="https://srinidhi8747.github.io/Srinidhi_Portfolio/">
+  <a href="https://srinidhi8747.github.io/Srinidhi_Portfolio/" target="_blank" rel="noopener noreferrer">
     <img src="Images/Sri.JPG" alt="Srinidhi B Portfolio Preview" width="220" style="border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);" />
   </a>
 
   <br />
   <br />
 
-  [🌐 **Live Portfolio Website**](https://srinidhi8747.github.io/Srinidhi_Portfolio/) • [📄 **Download Resume**](Resume/Srinidhi.pdf) • [📫 **Get In Touch**](#-contact--connect)
+  [🌐 **Live Portfolio Website**](https://srinidhi8747.github.io/Srinidhi_Portfolio/){:target="_blank"} • [📄 **Download Resume**](Resume/Srinidhi.pdf){:target="_blank"} • [📫 **Get In Touch**](https://srinidhi8747.github.io/Srinidhi_Portfolio/#contact){:target="_blank"}
 
 </div>
 
@@ -38,28 +38,28 @@
 
 ## 🌟 Overview
 
-Welcome to my personal developer portfolio repository[cite: 5]! This responsive web application highlights my professional work as a **Software Engineer II at Microchip Technology**, showcasing enterprise systems design, full-stack implementations, published research papers, academic honours, and verified certifications[cite: 1, 8].
+Welcome to my personal developer portfolio repository! This responsive web application highlights my professional work as a **Software Engineer II at Microchip Technology**, showcasing enterprise systems design, full-stack implementations, published research papers, academic honours, and verified certifications.
 
 ---
 
 ## 🛠️ Built With & Tech Stack
 
-This project is engineered as a lightweight, single-page application built with modern web technologies[cite: 1, 2]:
+This project is engineered as a lightweight, single-page application built with modern web technologies:
 
-* **Frontend:** React 18, JSX, JavaScript (ES6+), HTML5, CSS3[cite: 1, 2, 6]
-* **Styling & UI:** Modern Glassmorphism Theme, FontAwesome Icons, Google Fonts[cite: 2, 6]
-* **Transpiler:** Babel Standalone Compiler[cite: 2]
-* **Hosting:** GitHub Pages[cite: 5]
+* **Frontend:** React 18, JSX, JavaScript (ES6+), HTML5, CSS3
+* **Styling & UI:** Modern Glassmorphism Theme, FontAwesome Icons, Google Fonts
+* **Transpiler:** Babel Standalone Compiler
+* **Hosting:** GitHub Pages
 
 ---
 
 ## 🔥 Key Portfolio Features
 
-* 💼 **Work Experience & Impact:** Detailed timeline covering enterprise backend engineering, API microservices, OAuth 2.0 / RBAC security, and CI/CD pipelines[cite: 8].
-* 🚀 **Enterprise Projects Showcase:** Deep-dive cards explaining production systems like *MySo Customer Order Management* and *Sales Order Invoicing Engines*[cite: 8].
-* 📊 **Interactive Image Carousels:** Built-in React carousel component displaying international presentations (Thammasat University, Thailand) and academic project evaluations[cite: 8].
-* 📄 **Direct Resume Downloader:** One-click instant access to download the latest PDF resume[cite: 8].
-* 📬 **Direct Gmail Contact Integration:** Seamless contact form launching pre-formatted emails straight to Gmail[cite: 8].
+* 💼 **Work Experience & Impact:** Detailed timeline covering enterprise backend engineering, API microservices, OAuth 2.0 / RBAC security, and CI/CD pipelines.
+* 🚀 **Enterprise Projects Showcase:** Deep-dive cards explaining production systems like *MySo Customer Order Management* and *Sales Order Invoicing Engines*.
+* 📊 **Interactive Image Carousels:** Built-in React carousel component displaying international presentations (Thammasat University, Thailand) and academic project evaluations.
+* 📄 **Direct Resume Downloader:** One-click instant access to download the latest PDF resume.
+* 📬 **Direct Gmail Contact Integration:** Seamless contact form launching pre-formatted emails straight to Gmail.
 
 ---
 

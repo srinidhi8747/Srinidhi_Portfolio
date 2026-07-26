@@ -150,7 +150,7 @@ function App() {
         </section>
       </div>
 
-      {/* Experience */}
+      {/* Experience */}   
       <section id="experience">
         <div className="section-header">
           <h2 className="section-title">Work Experience</h2>
@@ -178,7 +178,8 @@ function App() {
               <li>Containerized applications using <strong>Docker</strong> and managed <strong>IIS-hosted deployments</strong> integrated with <strong>CI/CD pipelines</strong>, reducing deployment failures by <strong>40%</strong>.</li>
             </ul>
           </div>
-          {
+
+          {/* Software Engineering Intern / Engineer I */}
           <div className="timeline-item">
             <div className="timeline-header">
               <div>
@@ -188,14 +189,13 @@ function App() {
               <div className="timeline-date">Oct 2022 – Oct 2023</div>
             </div>
             <ul className="timeline-list">
-            <li>Contributed to enterprise web application components using <strong>C#</strong>, <strong>.NET Core</strong>, and <strong>React</strong>.</li>
-            <li>Assisted in <strong>database schema optimizations</strong>, <strong>stored procedure writing</strong>, and <strong>RESTful API integrations</strong>.</li>
-            <li>Implemented transactional <strong>CRUD operations</strong> with validation and <strong>integrity controls</strong>.</li>
-            <li>Developed unit tests using <strong>NUnit</strong> and <strong>Moq</strong>, reducing regression defects by <strong>25%</strong>.</li>
-            <li>Assisted in debugging production issues and <strong>optimizing database queries</strong> for high-volume workloads.</li>
+              <li>Contributed to enterprise web application components using <strong>C#</strong>, <strong>.NET Core</strong>, and <strong>React</strong>.</li>
+              <li>Assisted in <strong>database schema optimizations</strong>, <strong>stored procedure writing</strong>, and <strong>RESTful API integrations</strong>.</li>
+              <li>Implemented transactional <strong>CRUD operations</strong> with validation and <strong>integrity controls</strong>.</li>
+              <li>Developed unit tests using <strong>NUnit</strong> and <strong>Moq</strong>, reducing regression defects by <strong>25%</strong>.</li>
+              <li>Assisted in debugging production issues and <strong>optimizing database queries</strong> for high-volume workloads.</li>
             </ul>
           </div>
-          }
         </div>
       </section>
 

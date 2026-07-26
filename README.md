@@ -24,14 +24,14 @@
 
   <!-- Portfolio Image Banner -->
   <a href="https://srinidhi8747.github.io/Srinidhi_Portfolio/" target="_blank" rel="noopener noreferrer">
-    <img src="Images/Sri.JPG" alt="Srinidhi B Portfolio Preview" width="220" style="border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);" />
+    <img src="https://srinidhi8747.github.io/Srinidhi_Portfolio/Images/Sri.JPG" alt="Srinidhi B Portfolio Preview" width="220" style="border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);" />
   </a>
 
   <br />
   <br />
 
   <a href="https://srinidhi8747.github.io/Srinidhi_Portfolio/" target="_blank" rel="noopener noreferrer">🌐 <strong>Live Portfolio Website</strong></a> • 
-  <a href="Resume/Srinidhi.pdf" target="_blank" rel="noopener noreferrer">📄 <strong>Download Resume</strong></a> • 
+  <a href="https://srinidhi8747.github.io/Srinidhi_Portfolio/Resume/Srinidhi.pdf" target="_blank" rel="noopener noreferrer">📄 <strong>Download Resume</strong></a> • 
   <a href="https://srinidhi8747.github.io/Srinidhi_Portfolio/#contact" target="_blank" rel="noopener noreferrer">📫 <strong>Get In Touch</strong></a>
 
 </div>
@@ -70,12 +70,12 @@ This project is engineered as a lightweight, single-page application built with 
 ```text
 Srinidhi_Portfolio/
 │
-├── Images/                   # Gallery photos, paper previews, and profile assets
-├── Resume/                   # Professional PDF Resume
+├── Images/                    # Gallery photos, paper previews, and profile assets
+├── Resume/                    # Professional PDF Resume
 │   └── Srinidhi.pdf
-├── App.js                    # Core React application logic & components
-├── index.js                  # React DOM rendering root
-├── index.html                # Entry HTML5 document & CDN integrations
-├── styles.css                # Global glassmorphism & responsive CSS styling
-├── LICENSE                   # MIT License
-└── README.md                 # Project documentation
+├── App.js                     # Core React application logic & components
+├── index.js                   # React DOM rendering root
+├── index.html                 # Entry HTML5 document & CDN integrations
+├── styles.css                 # Global glassmorphism & responsive CSS styling
+├── LICENSE                    # MIT License
+└── README.md                  # Project documentation
